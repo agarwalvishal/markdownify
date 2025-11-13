@@ -84,7 +84,7 @@ def main():
         frontmatter = f"""---
 title: "{title}"
 source_url: "{source_url}"
-source_library: {os.getenv('SOURCE_LIBRARY')}
+source_library: "{os.getenv('SOURCE_LIBRARY')}"
 ---
 \n"""
         
