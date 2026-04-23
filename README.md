@@ -10,8 +10,9 @@ pip install -r requirements.txt
 2. Set values in `.env` file
 
 ```
-FIRECRAWL_API_KEY = ""
+FIRECRAWL_API_KEY = "" #your_api_key_here
 URL = "" #URL to crawl
+LIMIT = 175 #Number of pages to crawl
 SOURCE_LIBRARY = "" #Name of the library being crawled (optional)
 ```
 

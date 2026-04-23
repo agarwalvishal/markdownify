@@ -21,12 +21,14 @@ def main():
         safe_base_url_regex = re.escape(DOCS_URL)
         exclude_pattern = f"^{safe_base_url_regex}/blog/.*"
         
+        LIMIT = os.getenv('LIMIT', 100)
+
         print(f"Submitting crawl job for {DOCS_URL}...")
         print(f"Exclude pattern: {exclude_pattern}")
 
         crawl_result = app.crawl(
             url=DOCS_URL,
-            limit=175,
+            limit=LIMIT,
             exclude_paths=[exclude_pattern], 
             scrape_options=ScrapeOptions(formats=['markdown']) 
         )
